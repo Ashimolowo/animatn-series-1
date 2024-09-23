@@ -1,0 +1,100 @@
+html{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    
+    background-color: black;
+    height: 200px;
+    width: 200px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2,1fr);
+   gap: 80px;
+}
+@keyframes rotata{
+    0%{
+        transform: rotate(0deg) translateX(150px) rotate(0deg);       
+    }
+    10%{
+        background-color: aqua;
+    }
+    20%{
+        background-color: rgb(9, 80, 80);
+    }
+    30%{
+        background-color: rgb(119, 139, 27);
+    }
+    30%{
+        background-color: rgb(200, 243, 10);
+    }
+    100%{
+        background-color: antiquewhite;
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);   
+    }
+}
+@keyframes rotatu{
+    0%{
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);       
+    }
+    10%{
+        background-color: aqua;
+    }
+    20%{
+       
+    }
+    30%{
+      
+    }
+    100%{
+        
+        transform: rotate(0deg) translateX(150px) rotate(0deg);  
+    }
+}
+.container div:nth-child(1){
+    background-color: blue;
+    animation: rotatu 2s linear infinite;
+
+}
+.container div:nth-child(2){
+    position: relative;
+    left: 1.24rem;
+    top: -0.02rem;
+    background-color: red;
+    animation: rotatu 2s linear infinite;
+
+}
+.container div:nth-child(3){
+    background-color: yellow;
+    position: relative;
+    top: 1.24rem;
+    animation: rotata 2s linear infinite;
+
+}
+.container div:nth-child(4){
+    background-color:green;
+    position: relative;
+    left: 1.24rem;
+    top: 1.24rem;
+    animation: rotata 2s linear infinite;
+
+}
+.dot{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+}
+
+.rotate{
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    transform: rotate(45deg);
+}
